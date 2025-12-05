@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/mnt/c/TC-202502/TC-202502-TF/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
