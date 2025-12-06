@@ -1,0 +1,22 @@
+digraph Flowchart {
+    // Configuración global
+    rankdir=TB;
+    node [style=filled, fontname="Arial", fontsize=12];
+    edge [fontname="Arial", fontsize=10];
+    bgcolor="#F5F5F5";
+
+    // Nodos del diagrama
+    node0 [label="INICIO", shape=oval, fillcolor="#90EE90", penwidth=2];
+    node1 [label="cadena nombre = \"alfonso\"", shape=box, fillcolor="#87CEEB"];
+    node2 [label="entero edad = 30", shape=box, fillcolor="#87CEEB"];
+    node3 [label="Leer nombre, edad", shape=parallelogram, fillcolor="#DDA0DD"];
+    node4 [label="Escribir \"Hola \", nombre, \"!, tu edad es \",...", shape=parallelogram, fillcolor="#FFA07A"];
+    node5 [label="FIN", shape=oval, fillcolor="#FFB6C1", penwidth=2];
+
+    // Conexiones
+    node0 -> node1;
+    node1 -> node2;
+    node2 -> node3;
+    node3 -> node4;
+    node4 -> node5;
+}

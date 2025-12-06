@@ -1,0 +1,49 @@
+digraph Flowchart {
+    // Configuración global
+    rankdir=TB;
+    node [style=filled, fontname="Arial", fontsize=12];
+    edge [fontname="Arial", fontsize=10];
+    bgcolor="#F5F5F5";
+
+    // Nodos del diagrama
+    node0 [label="INICIO", shape=oval, fillcolor="#90EE90", penwidth=2];
+    node1 [label="int edad = 25", shape=box, fillcolor="#87CEEB"];
+    node2 [label="float precio = 99.95", shape=box, fillcolor="#87CEEB"];
+    node3 [label="string nombre = \"Juan\"", shape=box, fillcolor="#87CEEB"];
+    node4 [label="Escribir \"Hola\", nombre, \"tu edad es\", edad", shape=parallelogram, fillcolor="#FFA07A"];
+    node5 [label="edad>=18", shape=diamond, fillcolor="#FFD700"];
+    node6 [label="Escribir \"Eres mayor de edad\"", shape=parallelogram, fillcolor="#FFA07A"];
+    node7 [label="Escribir \"Eres menor de edad\"", shape=parallelogram, fillcolor="#FFA07A"];
+    node8 [label="", shape=circle, fillcolor="#D3D3D3"];
+    node9 [label="array numeros = [...]", shape=box, fillcolor="#87CEEB"];
+    node10 [label="Para cada num en numeros", shape=hexagon, fillcolor="#98FB98"];
+    node11 [label="Escribir num*2", shape=parallelogram, fillcolor="#FFA07A"];
+    node12 [label="", shape=circle, fillcolor="#D3D3D3"];
+    node13 [label="Leer nombre, edad", shape=parallelogram, fillcolor="#DDA0DD"];
+    node14 [label="Para (condición)", shape=hexagon, fillcolor="#98FB98"];
+    node15 [label="Escribir numeros[i]", shape=parallelogram, fillcolor="#FFA07A"];
+    node16 [label="", shape=circle, fillcolor="#D3D3D3"];
+    node17 [label="FIN", shape=oval, fillcolor="#FFB6C1", penwidth=2];
+
+    // Conexiones
+    node0 -> node1;
+    node1 -> node2;
+    node2 -> node3;
+    node3 -> node4;
+    node4 -> node5;
+    node5 -> node6 [label="Verdadero", color="#2E8B57", fontcolor="#2E8B57"];
+    node5 -> node7 [label="Falso", color="#DC143C", fontcolor="#DC143C"];
+    node5 -> node6;
+    node5 -> node7;
+    node6 -> node8;
+    node7 -> node8;
+    node8 -> node9;
+    node9 -> node10;
+    node10 -> node11;
+    node10 -> node12;
+    node12 -> node13;
+    node13 -> node14;
+    node14 -> node15;
+    node14 -> node16;
+    node16 -> node17;
+}

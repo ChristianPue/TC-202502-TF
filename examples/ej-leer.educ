@@ -1,0 +1,5 @@
+cadena nombre = "alfonso";
+entero edad = 30;
+
+read(nombre, edad);
+print("Hola ", nombre, "!, tu edad es ", edad);

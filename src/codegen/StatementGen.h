@@ -104,16 +104,44 @@ public:
                 continue;
             }
 
-            std::string fmtStr;
             Type* type = alloca->getAllocatedType();
             
-            if (type->isIntegerTy(32)) fmtStr = "%d";
-            else if (type->isFloatTy()) fmtStr = "%f";
-            else if (type->isIntegerTy(1)) fmtStr = "%d";
-            else fmtStr = "%s";
+            // CASO ESPECIAL: CADENAS (STRINGS)
+            // Si la variable es un puntero (string), necesitamos un buffer nuevo y mutable.
+            if (type->isPointerTy()) { 
+                // 1. Crear un buffer de caracteres en el stack (ej. 256 bytes)
+                //    Equivalente a: char buffer[256];
+                Type* charType = builder->getInt8Ty();
+                ArrayType* bufferType = ArrayType::get(charType, 256);
+                AllocaInst* buffer = builder->CreateAlloca(bufferType, nullptr, "str_buffer");
+                
+                // 2. Obtener puntero al inicio del array (decay a ptr)
+                Value* bufferPtr = builder->CreateInBoundsGEP(
+                    bufferType, buffer, 
+                    {builder->getInt32(0), builder->getInt32(0)}
+                );
 
-            Value* formatPtr = codeGen->createFormatString(fmtStr);
-            builder->CreateCall(scanfFunc, {formatPtr, alloca});
+                // 3. Leer input en ese buffer (limitado a 255 chars para seguridad)
+                Value* formatPtr = codeGen->createFormatString("%255s");
+                builder->CreateCall(scanfFunc, {formatPtr, bufferPtr});
+
+                // 4. Actualizar la variable 'nombre' para que apunte a este nuevo buffer
+                //    nombre = &buffer[0];
+                builder->CreateStore(bufferPtr, alloca);
+            } 
+            // CASO NORMAL: ENTEROS Y FLOTANTES
+            else {
+                std::string fmtStr;
+                if (type->isIntegerTy(32)) fmtStr = "%d";
+                else if (type->isFloatTy()) fmtStr = "%f";
+                else if (type->isIntegerTy(1)) fmtStr = "%d"; // bool
+                else fmtStr = "%d"; // fallback
+
+                Value* formatPtr = codeGen->createFormatString(fmtStr);
+                
+                // Para tipos primitivos, pasamos la dirección de la variable (alloca)
+                builder->CreateCall(scanfFunc, {formatPtr, alloca});
+            }
         }
     }
 

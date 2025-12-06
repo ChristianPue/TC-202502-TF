@@ -110,7 +110,7 @@ Resultado: archivo .ll optimizado según el nivel.
 - Exporta un archivo .dot con el grafo del flujo del programa.
 - Visualización con Graphviz: 
 ```bash
-dot -Tpng programa.dot -o diagrama.png
+dot -Tpng ./examples/programa.dot -o ./examples/diagrama.png
 ```
 
 ## 📌 Conclusión
