@@ -20,6 +20,9 @@ events:
     names:
       - "uname"
     candidate_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -79,11 +82,17 @@ events:
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
     searched_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/uname"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/uname"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/uname"
       - "/usr/local/sbin/uname"
       - "/usr/local/bin/uname"
     found: "/usr/sbin/uname"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -144,6 +153,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -172,6 +182,9 @@ events:
       - "make"
       - "smake"
     candidate_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -231,6 +244,9 @@ events:
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
     searched_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/gmake"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/gmake"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/gmake"
       - "/usr/local/sbin/gmake"
       - "/usr/local/bin/gmake"
       - "/usr/sbin/gmake"
@@ -289,11 +305,17 @@ events:
       - "/usr/bin/site_perl/gmake"
       - "/usr/bin/vendor_perl/gmake"
       - "/usr/bin/core_perl/gmake"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/make"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/make"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/make"
       - "/usr/local/sbin/make"
       - "/usr/local/bin/make"
     found: "/usr/sbin/make"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -354,6 +376,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -380,6 +403,9 @@ events:
       - "icx"
       - "clang"
     candidate_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -439,11 +465,17 @@ events:
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
     searched_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/cc"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/cc"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/cc"
       - "/usr/local/sbin/cc"
       - "/usr/local/bin/cc"
     found: "/usr/sbin/cc"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -504,6 +536,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -531,6 +564,9 @@ events:
     found: "/usr/share/cmake/Modules/CMakeCCompilerId.c.in"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -591,6 +627,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -634,6 +671,9 @@ events:
       - "ar"
     candidate_directories:
       - "/usr/sbin/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -694,6 +734,9 @@ events:
     found: "/usr/sbin/ar"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -754,6 +797,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -775,6 +819,9 @@ events:
       - "ranlib"
     candidate_directories:
       - "/usr/sbin/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -835,6 +882,9 @@ events:
     found: "/usr/sbin/ranlib"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -895,6 +945,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -916,6 +967,9 @@ events:
       - "strip"
     candidate_directories:
       - "/usr/sbin/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -976,6 +1030,9 @@ events:
     found: "/usr/sbin/strip"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -1036,6 +1093,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1057,6 +1115,9 @@ events:
       - "ld"
     candidate_directories:
       - "/usr/sbin/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -1117,6 +1178,9 @@ events:
     found: "/usr/sbin/ld"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -1177,6 +1241,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1198,6 +1263,9 @@ events:
       - "nm"
     candidate_directories:
       - "/usr/sbin/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -1258,6 +1326,9 @@ events:
     found: "/usr/sbin/nm"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -1318,6 +1389,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1339,6 +1411,9 @@ events:
       - "objdump"
     candidate_directories:
       - "/usr/sbin/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -1399,6 +1474,9 @@ events:
     found: "/usr/sbin/objdump"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -1459,6 +1537,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1480,6 +1559,9 @@ events:
       - "objcopy"
     candidate_directories:
       - "/usr/sbin/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -1540,6 +1622,9 @@ events:
     found: "/usr/sbin/objcopy"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -1600,6 +1685,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1621,6 +1707,9 @@ events:
       - "readelf"
     candidate_directories:
       - "/usr/sbin/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -1681,6 +1770,9 @@ events:
     found: "/usr/sbin/readelf"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -1741,6 +1833,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1762,6 +1855,9 @@ events:
       - "dlltool"
     candidate_directories:
       - "/usr/sbin/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -1821,6 +1917,9 @@ events:
       - "/usr/bin/core_perl/"
     searched_directories:
       - "/usr/sbin/dlltool"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/dlltool"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/dlltool"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/dlltool"
       - "/usr/local/sbin/dlltool"
       - "/usr/local/bin/dlltool"
       - "/usr/bin/dlltool"
@@ -1881,6 +1980,9 @@ events:
     found: false
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -1941,6 +2043,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1962,6 +2065,9 @@ events:
       - "addr2line"
     candidate_directories:
       - "/usr/sbin/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -2022,6 +2128,9 @@ events:
     found: "/usr/sbin/addr2line"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -2082,6 +2191,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -2103,6 +2213,9 @@ events:
       - "tapi"
     candidate_directories:
       - "/usr/sbin/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -2162,6 +2275,9 @@ events:
       - "/usr/bin/core_perl/"
     searched_directories:
       - "/usr/sbin/tapi"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/tapi"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/tapi"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/tapi"
       - "/usr/local/sbin/tapi"
       - "/usr/local/bin/tapi"
       - "/usr/bin/tapi"
@@ -2222,6 +2338,9 @@ events:
     found: false
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -2282,6 +2401,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -2306,6 +2426,9 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "/usr/sbin/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -2365,6 +2488,9 @@ events:
       - "/usr/bin/core_perl/"
     searched_directories:
       - "/usr/sbin/gcc-ar-15.2"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.2"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/gcc-ar-15.2"
       - "/usr/local/sbin/gcc-ar-15.2"
       - "/usr/local/bin/gcc-ar-15.2"
       - "/usr/bin/gcc-ar-15.2"
@@ -2423,6 +2549,9 @@ events:
       - "/usr/bin/vendor_perl/gcc-ar-15.2"
       - "/usr/bin/core_perl/gcc-ar-15.2"
       - "/usr/sbin/gcc-ar-15"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/gcc-ar-15"
       - "/usr/local/sbin/gcc-ar-15"
       - "/usr/local/bin/gcc-ar-15"
       - "/usr/bin/gcc-ar-15"
@@ -2481,6 +2610,9 @@ events:
       - "/usr/bin/vendor_perl/gcc-ar-15"
       - "/usr/bin/core_perl/gcc-ar-15"
       - "/usr/sbin/gcc-ar15"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar15"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar15"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/gcc-ar15"
       - "/usr/local/sbin/gcc-ar15"
       - "/usr/local/bin/gcc-ar15"
       - "/usr/bin/gcc-ar15"
@@ -2541,6 +2673,9 @@ events:
     found: "/usr/sbin/gcc-ar"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -2601,6 +2736,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -2625,6 +2761,9 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "/usr/sbin/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -2684,6 +2823,9 @@ events:
       - "/usr/bin/core_perl/"
     searched_directories:
       - "/usr/sbin/gcc-ranlib-15.2"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.2"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/gcc-ranlib-15.2"
       - "/usr/local/sbin/gcc-ranlib-15.2"
       - "/usr/local/bin/gcc-ranlib-15.2"
       - "/usr/bin/gcc-ranlib-15.2"
@@ -2742,6 +2884,9 @@ events:
       - "/usr/bin/vendor_perl/gcc-ranlib-15.2"
       - "/usr/bin/core_perl/gcc-ranlib-15.2"
       - "/usr/sbin/gcc-ranlib-15"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/gcc-ranlib-15"
       - "/usr/local/sbin/gcc-ranlib-15"
       - "/usr/local/bin/gcc-ranlib-15"
       - "/usr/bin/gcc-ranlib-15"
@@ -2800,6 +2945,9 @@ events:
       - "/usr/bin/vendor_perl/gcc-ranlib-15"
       - "/usr/bin/core_perl/gcc-ranlib-15"
       - "/usr/sbin/gcc-ranlib15"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib15"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib15"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/gcc-ranlib15"
       - "/usr/local/sbin/gcc-ranlib15"
       - "/usr/local/bin/gcc-ranlib15"
       - "/usr/bin/gcc-ranlib15"
@@ -2860,6 +3008,9 @@ events:
     found: "/usr/sbin/gcc-ranlib"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -2920,6 +3071,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -2953,6 +3105,9 @@ events:
     found: "/usr/sbin/c++"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -3013,6 +3168,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -3040,6 +3196,9 @@ events:
     found: "/usr/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -3100,6 +3259,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -3146,6 +3306,9 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "/usr/sbin/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -3205,6 +3368,9 @@ events:
       - "/usr/bin/core_perl/"
     searched_directories:
       - "/usr/sbin/gcc-ar-15.2"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.2"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/gcc-ar-15.2"
       - "/usr/local/sbin/gcc-ar-15.2"
       - "/usr/local/bin/gcc-ar-15.2"
       - "/usr/bin/gcc-ar-15.2"
@@ -3263,6 +3429,9 @@ events:
       - "/usr/bin/vendor_perl/gcc-ar-15.2"
       - "/usr/bin/core_perl/gcc-ar-15.2"
       - "/usr/sbin/gcc-ar-15"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/gcc-ar-15"
       - "/usr/local/sbin/gcc-ar-15"
       - "/usr/local/bin/gcc-ar-15"
       - "/usr/bin/gcc-ar-15"
@@ -3321,6 +3490,9 @@ events:
       - "/usr/bin/vendor_perl/gcc-ar-15"
       - "/usr/bin/core_perl/gcc-ar-15"
       - "/usr/sbin/gcc-ar15"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar15"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar15"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/gcc-ar15"
       - "/usr/local/sbin/gcc-ar15"
       - "/usr/local/bin/gcc-ar15"
       - "/usr/bin/gcc-ar15"
@@ -3381,6 +3553,9 @@ events:
     found: "/usr/sbin/gcc-ar"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -3441,6 +3616,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -3465,6 +3641,9 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "/usr/sbin/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -3524,6 +3703,9 @@ events:
       - "/usr/bin/core_perl/"
     searched_directories:
       - "/usr/sbin/gcc-ranlib-15.2"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.2"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/gcc-ranlib-15.2"
       - "/usr/local/sbin/gcc-ranlib-15.2"
       - "/usr/local/bin/gcc-ranlib-15.2"
       - "/usr/bin/gcc-ranlib-15.2"
@@ -3582,6 +3764,9 @@ events:
       - "/usr/bin/vendor_perl/gcc-ranlib-15.2"
       - "/usr/bin/core_perl/gcc-ranlib-15.2"
       - "/usr/sbin/gcc-ranlib-15"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/gcc-ranlib-15"
       - "/usr/local/sbin/gcc-ranlib-15"
       - "/usr/local/bin/gcc-ranlib-15"
       - "/usr/bin/gcc-ranlib-15"
@@ -3640,6 +3825,9 @@ events:
       - "/usr/bin/vendor_perl/gcc-ranlib-15"
       - "/usr/bin/core_perl/gcc-ranlib-15"
       - "/usr/sbin/gcc-ranlib15"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib15"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib15"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/gcc-ranlib15"
       - "/usr/local/sbin/gcc-ranlib15"
       - "/usr/local/bin/gcc-ranlib15"
       - "/usr/bin/gcc-ranlib15"
@@ -3700,6 +3888,9 @@ events:
     found: "/usr/sbin/gcc-ranlib"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -3760,6 +3951,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
   -
     kind: "try_compile-v1"
     backtrace:
@@ -3769,8 +3961,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-lpAJue"
-      binary: "/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-lpAJue"
+      source: "/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-ROyYSK"
+      binary: "/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-ROyYSK"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -3779,14 +3971,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-lpAJue'
+        Change Dir: '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-ROyYSK'
         
-        Run Build Command(s): /usr/sbin/cmake -E env VERBOSE=1 /usr/sbin/make -f Makefile cmTC_20e4a/fast
-        /usr/sbin/make  -f CMakeFiles/cmTC_20e4a.dir/build.make CMakeFiles/cmTC_20e4a.dir/build
-        make[1]: Entering directory '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-lpAJue'
-        make[1]: Warning: File 'CMakeFiles/cmTC_20e4a.dir/progress.make' has modification time 0.0002 s in the future
-        Building C object CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o
-        /usr/sbin/cc   -v -o CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/sbin/cmake -E env VERBOSE=1 /usr/sbin/make -f Makefile cmTC_5c74c/fast
+        /usr/sbin/make  -f CMakeFiles/cmTC_5c74c.dir/build.make CMakeFiles/cmTC_5c74c.dir/build
+        make[1]: Entering directory '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-ROyYSK'
+        Building C object CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o
+        /usr/sbin/cc   -v -o CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/usr/sbin/cc
         Target: x86_64-pc-linux-gnu
@@ -3794,8 +3985,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.1 20251112 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_20e4a.dir/'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_20e4a.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/cc7QQlTV.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5c74c.dir/'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_5c74c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/cct9Dpn9.s
         GNU C23 (GCC) version 15.2.1 20251112 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 15.2.1 20251112, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -3809,14 +4000,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: e7e806b0d021308da32115a1780fef1e
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_20e4a.dir/'
-         as -v --64 -o CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o /tmp/cc7QQlTV.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5c74c.dir/'
+         as -v --64 -o CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o /tmp/cct9Dpn9.s
         GNU assembler version 2.45.1 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.45.1
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_20e4a
-        /usr/sbin/cmake -E cmake_link_script CMakeFiles/cmTC_20e4a.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_5c74c
+        /usr/sbin/cmake -E cmake_link_script CMakeFiles/cmTC_5c74c.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/sbin/cc
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper
@@ -3827,15 +4018,14 @@ events:
         gcc version 15.2.1 20251112 (GCC) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_20e4a' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_20e4a.'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJpE9Ca.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_20e4a /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5c74c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_5c74c.'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpsbene.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_5c74c /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
         collect2 version 15.2.1 20251112
-        /usr/sbin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJpE9Ca.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_20e4a /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
+        /usr/sbin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpsbene.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_5c74c /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
         GNU ld (GNU Binutils) 2.45.1
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_20e4a' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_20e4a.'
-        /usr/sbin/cc  -v -Wl,-v CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o -o cmTC_20e4a
-        make[1]: warning:  Clock skew detected.  Your build may be incomplete.
-        make[1]: Leaving directory '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-lpAJue'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5c74c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_5c74c.'
+        /usr/sbin/cc  -v -Wl,-v CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o -o cmTC_5c74c
+        make[1]: Leaving directory '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-ROyYSK'
         
       exitCode: 0
   -
@@ -3870,14 +4060,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-lpAJue']
+        ignore line: [Change Dir: '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-ROyYSK']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/sbin/cmake -E env VERBOSE=1 /usr/sbin/make -f Makefile cmTC_20e4a/fast]
-        ignore line: [/usr/sbin/make  -f CMakeFiles/cmTC_20e4a.dir/build.make CMakeFiles/cmTC_20e4a.dir/build]
-        ignore line: [make[1]: Entering directory '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-lpAJue']
-        ignore line: [make[1]: Warning: File 'CMakeFiles/cmTC_20e4a.dir/progress.make' has modification time 0.0002 s in the future]
-        ignore line: [Building C object CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/sbin/cc   -v -o CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/sbin/cmake -E env VERBOSE=1 /usr/sbin/make -f Makefile cmTC_5c74c/fast]
+        ignore line: [/usr/sbin/make  -f CMakeFiles/cmTC_5c74c.dir/build.make CMakeFiles/cmTC_5c74c.dir/build]
+        ignore line: [make[1]: Entering directory '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-ROyYSK']
+        ignore line: [Building C object CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/sbin/cc   -v -o CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/sbin/cc]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -3885,8 +4074,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.1 20251112 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_20e4a.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_20e4a.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/cc7QQlTV.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5c74c.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_5c74c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/cct9Dpn9.s]
         ignore line: [GNU C23 (GCC) version 15.2.1 20251112 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 15.2.1 20251112  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -3900,14 +4089,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: e7e806b0d021308da32115a1780fef1e]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_20e4a.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o /tmp/cc7QQlTV.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5c74c.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o /tmp/cct9Dpn9.s]
         ignore line: [GNU assembler version 2.45.1 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.45.1]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_20e4a]
-        ignore line: [/usr/sbin/cmake -E cmake_link_script CMakeFiles/cmTC_20e4a.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_5c74c]
+        ignore line: [/usr/sbin/cmake -E cmake_link_script CMakeFiles/cmTC_5c74c.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/sbin/cc]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper]
@@ -3918,13 +4107,13 @@ events:
         ignore line: [gcc version 15.2.1 20251112 (GCC) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_20e4a' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_20e4a.']
-        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJpE9Ca.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_20e4a /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5c74c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_5c74c.']
+        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpsbene.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_5c74c /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccJpE9Ca.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccpsbene.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -3939,7 +4128,7 @@ events:
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-pie] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_20e4a] ==> ignore
+          arg [cmTC_5c74c] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o]
@@ -3951,7 +4140,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [--push-state] ==> ignore
           arg [--as-needed] ==> ignore
@@ -3966,7 +4155,7 @@ events:
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
         ignore line: [collect2 version 15.2.1 20251112]
-        ignore line: [/usr/sbin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJpE9Ca.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_20e4a /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_20e4a.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
+        ignore line: [/usr/sbin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpsbene.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_5c74c /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_5c74c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
         linker tool for 'C': /usr/sbin/ld
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
@@ -4003,8 +4192,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-poro4e"
-      binary: "/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-poro4e"
+      source: "/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-1pXoKe"
+      binary: "/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-1pXoKe"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -4014,13 +4203,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-poro4e'
+        Change Dir: '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-1pXoKe'
         
-        Run Build Command(s): /usr/sbin/cmake -E env VERBOSE=1 /usr/sbin/make -f Makefile cmTC_0dc57/fast
-        /usr/sbin/make  -f CMakeFiles/cmTC_0dc57.dir/build.make CMakeFiles/cmTC_0dc57.dir/build
-        make[1]: Entering directory '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-poro4e'
-        Building CXX object CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/sbin/c++   -v -o CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/sbin/cmake -E env VERBOSE=1 /usr/sbin/make -f Makefile cmTC_70bbd/fast
+        /usr/sbin/make  -f CMakeFiles/cmTC_70bbd.dir/build.make CMakeFiles/cmTC_70bbd.dir/build
+        make[1]: Entering directory '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-1pXoKe'
+        Building CXX object CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/sbin/c++   -v -o CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/sbin/c++
         Target: x86_64-pc-linux-gnu
@@ -4028,8 +4217,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.1 20251112 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0dc57.dir/'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0dc57.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/cc05s7aj.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_70bbd.dir/'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_70bbd.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccBAhB9Z.s
         GNU C++17 (GCC) version 15.2.1 20251112 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 15.2.1 20251112, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -4046,14 +4235,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 4f062beaae229dc32234f13ba259a70e
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0dc57.dir/'
-         as -v --64 -o CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc05s7aj.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_70bbd.dir/'
+         as -v --64 -o CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccBAhB9Z.s
         GNU assembler version 2.45.1 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.45.1
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_0dc57
-        /usr/sbin/cmake -E cmake_link_script CMakeFiles/cmTC_0dc57.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_70bbd
+        /usr/sbin/cmake -E cmake_link_script CMakeFiles/cmTC_70bbd.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/sbin/c++
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper
@@ -4064,14 +4253,14 @@ events:
         gcc version 15.2.1 20251112 (GCC) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0dc57' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0dc57.'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2YAt20.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_0dc57 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_70bbd' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_70bbd.'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKYkFYF.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_70bbd /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
         collect2 version 15.2.1 20251112
-        /usr/sbin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2YAt20.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_0dc57 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
+        /usr/sbin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKYkFYF.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_70bbd /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
         GNU ld (GNU Binutils) 2.45.1
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0dc57' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0dc57.'
-        /usr/sbin/c++  -v -Wl,-v CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_0dc57
-        make[1]: Leaving directory '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-poro4e'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_70bbd' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_70bbd.'
+        /usr/sbin/c++  -v -Wl,-v CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_70bbd
+        make[1]: Leaving directory '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-1pXoKe'
         
       exitCode: 0
   -
@@ -4112,13 +4301,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-poro4e']
+        ignore line: [Change Dir: '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-1pXoKe']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/sbin/cmake -E env VERBOSE=1 /usr/sbin/make -f Makefile cmTC_0dc57/fast]
-        ignore line: [/usr/sbin/make  -f CMakeFiles/cmTC_0dc57.dir/build.make CMakeFiles/cmTC_0dc57.dir/build]
-        ignore line: [make[1]: Entering directory '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-poro4e']
-        ignore line: [Building CXX object CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/sbin/c++   -v -o CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/sbin/cmake -E env VERBOSE=1 /usr/sbin/make -f Makefile cmTC_70bbd/fast]
+        ignore line: [/usr/sbin/make  -f CMakeFiles/cmTC_70bbd.dir/build.make CMakeFiles/cmTC_70bbd.dir/build]
+        ignore line: [make[1]: Entering directory '/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/CMakeScratch/TryCompile-1pXoKe']
+        ignore line: [Building CXX object CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/sbin/c++   -v -o CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/sbin/c++]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -4126,8 +4315,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.1 20251112 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0dc57.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0dc57.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/cc05s7aj.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_70bbd.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_70bbd.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccBAhB9Z.s]
         ignore line: [GNU C++17 (GCC) version 15.2.1 20251112 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 15.2.1 20251112  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -4144,14 +4333,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 4f062beaae229dc32234f13ba259a70e]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0dc57.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc05s7aj.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_70bbd.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccBAhB9Z.s]
         ignore line: [GNU assembler version 2.45.1 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.45.1]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_0dc57]
-        ignore line: [/usr/sbin/cmake -E cmake_link_script CMakeFiles/cmTC_0dc57.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_70bbd]
+        ignore line: [/usr/sbin/cmake -E cmake_link_script CMakeFiles/cmTC_70bbd.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/sbin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper]
@@ -4162,13 +4351,13 @@ events:
         ignore line: [gcc version 15.2.1 20251112 (GCC) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0dc57' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0dc57.']
-        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2YAt20.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_0dc57 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_70bbd' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_70bbd.']
+        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKYkFYF.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_70bbd /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/cc2YAt20.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccKYkFYF.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -4183,7 +4372,7 @@ events:
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-pie] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_0dc57] ==> ignore
+          arg [cmTC_70bbd] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o]
@@ -4195,7 +4384,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -4206,7 +4395,7 @@ events:
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
         ignore line: [collect2 version 15.2.1 20251112]
-        ignore line: [/usr/sbin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2YAt20.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_0dc57 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_0dc57.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
+        ignore line: [/usr/sbin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKYkFYF.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_70bbd /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_70bbd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
         linker tool for 'CXX': /usr/sbin/ld
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
@@ -4254,6 +4443,9 @@ events:
     names:
       - "java"
     candidate_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -4341,11 +4533,17 @@ events:
       - "/usr/local/jdk-1.7.0/bin/"
       - "/usr/local/jdk-1.6.0/bin/"
     searched_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/java"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/java"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/java"
       - "/usr/local/sbin/java"
       - "/usr/local/bin/java"
     found: "/usr/sbin/java"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -4406,6 +4604,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"
@@ -4436,6 +4635,9 @@ events:
     names:
       - "jar"
     candidate_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -4523,11 +4725,17 @@ events:
       - "/usr/local/jdk-1.7.0/bin/"
       - "/usr/local/jdk-1.6.0/bin/"
     searched_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/jar"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/jar"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/jar"
       - "/usr/local/sbin/jar"
       - "/usr/local/bin/jar"
     found: "/usr/sbin/jar"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -4588,6 +4796,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"
@@ -4618,6 +4827,9 @@ events:
     names:
       - "javac"
     candidate_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -4705,11 +4917,17 @@ events:
       - "/usr/local/jdk-1.7.0/bin/"
       - "/usr/local/jdk-1.6.0/bin/"
     searched_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/javac"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/javac"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/javac"
       - "/usr/local/sbin/javac"
       - "/usr/local/bin/javac"
     found: "/usr/sbin/javac"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -4770,6 +4988,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"
@@ -4800,6 +5019,9 @@ events:
     names:
       - "javah"
     candidate_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -4887,6 +5109,9 @@ events:
       - "/usr/local/jdk-1.7.0/bin/"
       - "/usr/local/jdk-1.6.0/bin/"
     searched_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/javah"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/javah"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/javah"
       - "/usr/local/sbin/javah"
       - "/usr/local/bin/javah"
       - "/usr/sbin/javah"
@@ -4976,6 +5201,9 @@ events:
     found: false
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -5036,6 +5264,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"
@@ -5066,6 +5295,9 @@ events:
     names:
       - "javadoc"
     candidate_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -5153,11 +5385,17 @@ events:
       - "/usr/local/jdk-1.7.0/bin/"
       - "/usr/local/jdk-1.6.0/bin/"
     searched_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/javadoc"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/javadoc"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/javadoc"
       - "/usr/local/sbin/javadoc"
       - "/usr/local/bin/javadoc"
     found: "/usr/sbin/javadoc"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -5218,6 +5456,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"
@@ -5248,6 +5487,9 @@ events:
     names:
       - "idlj"
     candidate_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -5335,6 +5577,9 @@ events:
       - "/usr/local/jdk-1.7.0/bin/"
       - "/usr/local/jdk-1.6.0/bin/"
     searched_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/idlj"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/idlj"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/idlj"
       - "/usr/local/sbin/idlj"
       - "/usr/local/bin/idlj"
       - "/usr/sbin/idlj"
@@ -5424,6 +5669,9 @@ events:
     found: false
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -5484,6 +5732,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"
@@ -5514,6 +5763,9 @@ events:
     names:
       - "jarsigner"
     candidate_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -5601,11 +5853,17 @@ events:
       - "/usr/local/jdk-1.7.0/bin/"
       - "/usr/local/jdk-1.6.0/bin/"
     searched_directories:
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/jarsigner"
+      - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/jarsigner"
+      - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli/jarsigner"
       - "/usr/local/sbin/jarsigner"
       - "/usr/local/bin/jarsigner"
     found: "/usr/sbin/jarsigner"
     search_context:
       ENV{PATH}:
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/root/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -5666,6 +5924,7 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/mnt/c/Users/Chris/AppData/Local/Programs/Microsoft VS Code/bin"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"

@@ -7,14 +7,16 @@
 #include "Driver.h"
 #include "optimizer/Optimizer.h"
 #include "runtime/JITEngine.h"
+#include "diagram/FlowchartGenerator.h"
 
 using namespace antlr4;
 
 // Función auxiliar para cambiar la extensión del archivo
-std::string getOutputFilename(const std::string& inputPath) {
+// Ahora acepta la extensión deseada (ej: ".ll", ".dot")
+std::string getOutputFilename(const std::string& inputPath, const std::string& extension) {
     size_t lastDot = inputPath.find_last_of(".");
-    if (lastDot == std::string::npos) return inputPath + ".ll";
-    return inputPath.substr(0, lastDot) + ".ll";
+    if (lastDot == std::string::npos) return inputPath + extension;
+    return inputPath.substr(0, lastDot) + extension;
 }
 
 // Función para parsear flags de optimización (-O0, -O1, -O2)
@@ -39,6 +41,17 @@ bool shouldRunJIT(int argc, const char* argv[]) {
     return false;
 }
 
+// Función para verificar si se debe generar diagrama de flujo
+bool shouldGenerateDiagram(int argc, const char* argv[]) {
+    for (int i = 2; i < argc; i++) {
+        std::string arg = argv[i];
+        if (arg == "-diagram" || arg == "--diagram" || arg == "-d") {
+            return true;
+        }
+    }
+    return false;
+}
+
 int main(int argc, const char* argv[]) {
     // 1. Verificación de argumentos
     if (argc < 2) {
@@ -49,21 +62,24 @@ int main(int argc, const char* argv[]) {
         std::cerr << "  -O2  Optimizaciones agresivas" << std::endl;
         std::cerr << "\nOpciones de ejecución:" << std::endl;
         std::cerr << "  -run|-r   Ejecutar el programa usando JIT" << std::endl;
+        std::cerr << "  -diagram|-d  Generar diagrama de flujo (Graphviz DOT)" << std::endl;
         std::cerr << "\nEjemplos:" << std::endl;
-        std::cerr << "  EduCode programa.educ              # Compilar a IR" << std::endl;
-        std::cerr << "  EduCode programa.educ -O2          # Compilar con optimización" << std::endl;
-        std::cerr << "  EduCode programa.educ -run         # Compilar y ejecutar" << std::endl;
-        std::cerr << "  EduCode programa.educ -O2 -run     # Optimizar y ejecutar" << std::endl;
+        std::cerr << "  ./build/EduCode ./examples/programa.educ              # Compilar a IR" << std::endl;
+        std::cerr << "  ./build/EduCode ./examples/programa.educ -O2          # Compilar con optimización" << std::endl;
+        std::cerr << "  ./build/EduCode ./examples/programa.educ -run         # Compilar y ejecutar" << std::endl;
+        std::cerr << "  ./build/EduCode ./examples/programa.educ -O2 -run     # Optimizar y ejecutar" << std::endl;
+        std::cerr << "  ./build/EduCode ./examples/programa.educ -diagram     # Generar diagrama de flujo" << std::endl;
         return 1;
     }
 
-    // CORRECCIÓN 1: Obtener el nivel de optimización antes de procesar nada
     int optimizationLevel = parseOptimizationLevel(argc, argv);
     
     bool runJIT = shouldRunJIT(argc, argv);
+
+    bool genDiagram = shouldGenerateDiagram(argc, argv);
+
     std::string inputPath = argv[1];
     
-    // CORRECCIÓN 2: Una sola declaración del stream
     std::ifstream stream(inputPath);
     
     if (!stream.is_open()) {
@@ -83,6 +99,32 @@ int main(int argc, const char* argv[]) {
     if (parser.getNumberOfSyntaxErrors() > 0) {
         std::cerr << "Error: La compilación se detuvo debido a errores de sintaxis." << std::endl;
         return 1;
+    }
+
+    // ==========================================
+    // OPCIONAL: GENERACIÓN DE DIAGRAMA DE FLUJO
+    // ==========================================
+    if (genDiagram) { // Ahora genDiagram ya existe
+        std::cout << "\n════════════════════════════════════════" << std::endl;
+        std::cout << "  GENERACIÓN DE DIAGRAMA DE FLUJO" << std::endl;
+        std::cout << "════════════════════════════════════════" << std::endl;
+
+        std::string dotPath = getOutputFilename(inputPath, ".dot");
+        
+        try {
+            FlowchartGenerator generator;
+            generator.generate(tree); 
+            
+            if (generator.exportDot(dotPath)) { 
+                std::cout << "✓ Diagrama generado exitosamente." << std::endl;
+                std::cout << "→ Archivo DOT: " << dotPath << std::endl;
+                std::cout << "  (Para ver imagen: dot -Tpng " << dotPath << " -o diagrama.png)" << std::endl;
+            } else {
+                std::cerr << "Error al guardar el archivo DOT." << std::endl;
+            }
+        } catch (const std::exception& e) {
+            std::cerr << "Error generando diagrama: " << e.what() << std::endl;
+        }
     }
 
     // 4. Generación de Código
@@ -114,7 +156,7 @@ int main(int argc, const char* argv[]) {
     std::cout << "  EXPORTACIÓN" << std::endl;
     std::cout << "════════════════════════════════════════" << std::endl;
     
-    std::string outputPath = getOutputFilename(inputPath);
+    std::string outputPath = getOutputFilename(inputPath, ".ll");
     driver.saveIR(outputPath);
     
     std::cout << "✓ Compilación exitosa." << std::endl;

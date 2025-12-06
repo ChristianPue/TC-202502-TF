@@ -127,12 +127,19 @@ set(RUNTIME_HEADERS
   runtime/RuntimeSupport.h
 )
 
+set(DIAGRAM_HEADERS
+  diagram/FlowchartNodes.h
+  diagram/DotExporter.h
+  diagram/FlowchartGenerator.h
+)
+
 set(ALL_SOURCES
   ${MAIN_SOURCES}
   ${DRIVER_HEADERS}
   ${CODEGEN_HEADERS}
   ${OPTIMIZER_HEADERS}
   ${RUNTIME_HEADERS}
+  ${DIAGRAM_HEADERS}
   ${ANTLR_EduCodeGrammar_CXX_OUTPUTS}
 )
 
@@ -147,6 +154,7 @@ target_include_directories(EduCode PRIVATE
   ${CMAKE_CURRENT_SOURCE_DIR}/codegen
   ${CMAKE_CURRENT_SOURCE_DIR}/optimizer
   ${CMAKE_CURRENT_SOURCE_DIR}/runtime
+  ${CMAKE_CURRENT_SOURCE_DIR}/diagram
   ${ANTLR_INCLUDE_DIR}
   ${ANTLR_EduCodeGrammar_OUTPUT_DIR}
   ${LLVM_INCLUDE_DIRS}

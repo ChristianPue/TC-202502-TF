@@ -549,4 +549,7 @@ CMakeFiles/EduCode.dir/Main.cpp.o: \
  /usr/include/llvm/Support/DynamicLibrary.h \
  /usr/include/llvm/IR/Verifier.h \
  /mnt/c/TC-202502/TC-202502-TF/src/runtime/RuntimeSupport.h \
- /usr/include/c++/15.2.1/cstdarg
+ /usr/include/c++/15.2.1/cstdarg \
+ /mnt/c/TC-202502/TC-202502-TF/src/diagram/FlowchartGenerator.h \
+ /mnt/c/TC-202502/TC-202502-TF/src/diagram/FlowchartNodes.h \
+ /mnt/c/TC-202502/TC-202502-TF/src/diagram/DotExporter.h

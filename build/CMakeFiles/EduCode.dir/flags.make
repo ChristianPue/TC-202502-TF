@@ -4,7 +4,7 @@
 # compile CXX with /usr/sbin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/c/TC-202502/TC-202502-TF/src -I/mnt/c/TC-202502/TC-202502-TF/src/codegen -I/mnt/c/TC-202502/TC-202502-TF/src/optimizer -I/mnt/c/TC-202502/TC-202502-TF/src/runtime -I/usr/include/antlr4-runtime -I/mnt/c/TC-202502/TC-202502-TF/build/antlr4cpp_generated_src/EduCode
+CXX_INCLUDES = -I/mnt/c/TC-202502/TC-202502-TF/src -I/mnt/c/TC-202502/TC-202502-TF/src/codegen -I/mnt/c/TC-202502/TC-202502-TF/src/optimizer -I/mnt/c/TC-202502/TC-202502-TF/src/runtime -I/mnt/c/TC-202502/TC-202502-TF/src/diagram -I/usr/include/antlr4-runtime -I/mnt/c/TC-202502/TC-202502-TF/build/antlr4cpp_generated_src/EduCode
 
 CXX_FLAGS =  -I/usr/include -std=c++17   -fexceptions -funwind-tables -D_GNU_SOURCE -DEXPERIMENTAL_KEY_INSTRUCTIONS -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -g -std=gnu++17
 
