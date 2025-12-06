@@ -5,24 +5,65 @@
 #include "EduCodeLexer.h"
 #include "EduCodeParser.h"
 #include "Driver.h"
+#include "optimizer/Optimizer.h"
+#include "runtime/JITEngine.h"
 
 using namespace antlr4;
 
-// Función auxiliar para cambiar la extensión del archivo (ej: test.educ -> test.ll)
+// Función auxiliar para cambiar la extensión del archivo
 std::string getOutputFilename(const std::string& inputPath) {
     size_t lastDot = inputPath.find_last_of(".");
     if (lastDot == std::string::npos) return inputPath + ".ll";
     return inputPath.substr(0, lastDot) + ".ll";
 }
 
+// Función para parsear flags de optimización (-O0, -O1, -O2)
+int parseOptimizationLevel(int argc, const char* argv[]) {
+    for (int i = 2; i < argc; i++) {
+        std::string arg = argv[i];
+        if (arg == "-O0") return 0;
+        if (arg == "-O1") return 1;
+        if (arg == "-O2") return 2;
+    }
+    return 1; // Por defecto O1
+}
+
+// Función para verificar si se debe ejecutar con JIT
+bool shouldRunJIT(int argc, const char* argv[]) {
+    for (int i = 2; i < argc; i++) {
+        std::string arg = argv[i];
+        if (arg == "-run" || arg == "--run" || arg == "-r") {
+            return true;
+        }
+    }
+    return false;
+}
+
 int main(int argc, const char* argv[]) {
     // 1. Verificación de argumentos
     if (argc < 2) {
-        std::cerr << "Uso: EduCode <archivo_entrada.educ>" << std::endl;
+        std::cerr << "Uso: EduCode <archivo_entrada.educ> [opciones]" << std::endl;
+        std::cerr << "Opciones:" << std::endl;
+        std::cerr << "  -O0  Sin optimizaciones" << std::endl;
+        std::cerr << "  -O1  Optimizaciones básicas (por defecto)" << std::endl;
+        std::cerr << "  -O2  Optimizaciones agresivas" << std::endl;
+        std::cerr << "\nOpciones de ejecución:" << std::endl;
+        std::cerr << "  -run|-r   Ejecutar el programa usando JIT" << std::endl;
+        std::cerr << "\nEjemplos:" << std::endl;
+        std::cerr << "  EduCode programa.educ              # Compilar a IR" << std::endl;
+        std::cerr << "  EduCode programa.educ -O2          # Compilar con optimización" << std::endl;
+        std::cerr << "  EduCode programa.educ -run         # Compilar y ejecutar" << std::endl;
+        std::cerr << "  EduCode programa.educ -O2 -run     # Optimizar y ejecutar" << std::endl;
         return 1;
     }
 
+    // CORRECCIÓN 1: Obtener el nivel de optimización antes de procesar nada
+    int optimizationLevel = parseOptimizationLevel(argc, argv);
+    
+    bool runJIT = shouldRunJIT(argc, argv);
     std::string inputPath = argv[1];
+    
+    // CORRECCIÓN 2: Una sola declaración del stream
     std::ifstream stream(inputPath);
     
     if (!stream.is_open()) {
@@ -36,30 +77,56 @@ int main(int argc, const char* argv[]) {
     CommonTokenStream tokens(&lexer);
     EduCodeParser parser(&tokens);
 
-    // 3. Parsing (comienza desde la regla 'program')
+    // 3. Parsing
     EduCodeParser::ProgramContext* tree = parser.program();
 
-    // Verificación básica de errores sintácticos
     if (parser.getNumberOfSyntaxErrors() > 0) {
         std::cerr << "Error: La compilación se detuvo debido a errores de sintaxis." << std::endl;
         return 1;
     }
 
-    // 4. Generación de Código (Recorrido del árbol con Driver)
+    // 4. Generación de Código
+    std::cout << "\n════════════════════════════════════════" << std::endl;
+    std::cout << "  FASE 1: GENERACIÓN DE CÓDIGO LLVM IR" << std::endl;
+    std::cout << "════════════════════════════════════════" << std::endl;
+    
     Driver driver;
     try {
         driver.visitProgram(tree);
+        std::cout << "✓ Generación de IR completada exitosamente." << std::endl;
     } catch (const std::exception& e) {
         std::cerr << "Error durante la generación de código: " << e.what() << std::endl;
         return 1;
     }
 
-    // 5. Guardar el archivo .ll resultante
+    // 5. Optimización del código IR
+    std::cout << "\n════════════════════════════════════════" << std::endl;
+    std::cout << "  FASE 2: OPTIMIZACIÓN DE CÓDIGO IR" << std::endl;
+    std::cout << "════════════════════════════════════════" << std::endl;
+    
+    // Ahora 'optimizationLevel' ya está declarada
+    Optimizer optimizer(driver.getModule(), optimizationLevel);
+    optimizer.optimize();
+    optimizer.printStats();
+    
+    // 6. Guardar el archivo .ll resultante
+    std::cout << "\n════════════════════════════════════════" << std::endl;
+    std::cout << "  EXPORTACIÓN" << std::endl;
+    std::cout << "════════════════════════════════════════" << std::endl;
+    
     std::string outputPath = getOutputFilename(inputPath);
     driver.saveIR(outputPath);
     
     std::cout << "✓ Compilación exitosa." << std::endl;
     std::cout << "→ Código LLVM IR generado en: " << outputPath << std::endl;
+    std::cout << "→ Nivel de optimización aplicado: -O" << optimizationLevel << std::endl;
+    std::cout << "════════════════════════════════════════\n" << std::endl;
+
+    // 7. Ejecución JIT (OBJETIVO 3) - si se especificó -run
+    if (runJIT) {
+        int exitCode = executeModule(driver.getModule());
+        return exitCode;
+    }
 
     return 0;
 }

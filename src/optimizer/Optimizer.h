@@ -7,6 +7,7 @@
 #include "llvm/Transforms/Scalar.h"
 #include "llvm/Transforms/Utils.h"
 #include "llvm/Transforms/InstCombine/InstCombine.h"
+#include "llvm/Transforms/Scalar/GVN.h"
 
 #include "ConstantFolding.h"
 #include "DeadCodeElimination.h"
@@ -29,18 +30,18 @@ public:
     // Ejecutar todas las optimizaciones
     void optimize() {
         if (optimizationLevel == 0) {
-            std::cout << "[Optimizer] Optimizaciones deshabilitadas." << std::endl;
+            std::cout << "[Optimizer] Optimizaciones deshabilitadas (-O0)." << std::endl;
             return;
         }
 
-        std::cout << "[Optimizer] Iniciando optimizaciones (nivel " 
+        std::cout << "[Optimizer] Iniciando optimizaciones manuales (nivel " 
                   << optimizationLevel << ")..." << std::endl;
 
         bool modified = true;
         int iteration = 0;
         const int maxIterations = 5; // Evitar bucles infinitos
 
-        // Ejecutar pases hasta que no haya más cambios
+        // --- FASE 1: Optimizaciones Manuales (Iterativas) ---
         while (modified && iteration < maxIterations) {
             modified = false;
             iteration++;
@@ -66,34 +67,40 @@ public:
             }
 
             if (!modified) {
-                std::cout << "    → Sin más optimizaciones posibles" << std::endl;
+                std::cout << "    → Convergencia alcanzada." << std::endl;
             }
         }
 
-        std::cout << "[Optimizer] Optimizaciones completadas en " 
-                  << iteration << " iteración(es)." << std::endl;
-    }
-
-    // Ejecutar optimizaciones LLVM estándar (opcional)
-    void runStandardPasses() {
-        legacy::PassManager PM;
-
-        // Pases básicos de LLVM
-        PM.add(createPromoteMemoryToRegisterPass());  // mem2reg
-        PM.add(createInstructionCombiningPass());     // instcombine
-        PM.add(createReassociatePass());              // reassociate
-        PM.add(createGVNPass());                      // GVN
-        PM.add(createCFGSimplificationPass());        // simplifycfg
-
+        // --- FASE 2: Pases Estándar de LLVM (Opcional, para nivel 2+) ---
+        // Esto limpiará lo que nuestras optimizaciones manuales hayan dejado sucio
         if (optimizationLevel >= 2) {
-            PM.add(createLoopSimplifyPass());
-            PM.add(createLICMPass());
-            PM.add(createIndVarSimplifyPass());
+            runStandardPasses();
         }
 
-        std::cout << "[Optimizer] Ejecutando pases estándar de LLVM..." << std::endl;
+        std::cout << "[Optimizer] Proceso completado." << std::endl;
+        printStats();
+    }
+
+    // Ejecutar optimizaciones nativas de LLVM (Legacy Pass Manager)
+    void runStandardPasses() {
+        std::cout << "[Optimizer] Ejecutando pases nativos de LLVM..." << std::endl;
+        
+        legacy::PassManager PM;
+
+        // Limpieza básica y canonicalización
+        PM.add(createPromoteMemoryToRegisterPass());  // mem2reg (Convierte allocas a registros SSA)
+        PM.add(createInstructionCombiningPass());     // instcombine
+        PM.add(createReassociatePass());              // reassociate
+        PM.add(createCFGSimplificationPass());        // simplifycfg
+        PM.add(createGVNPass());                      // GVN
+
+        if (optimizationLevel >= 2) {
+            // Optimizaciones de bucles nativas
+            PM.add(createLoopSimplifyPass());
+            PM.add(createLICMPass());
+        }
+
         PM.run(*module);
-        std::cout << "[Optimizer] Pases estándar completados." << std::endl;
     }
 
     // Mostrar estadísticas de optimización
@@ -108,9 +115,8 @@ public:
             totalFunctions++;
             for (BasicBlock& BB : F) {
                 totalBlocks++;
-                for (Instruction& I : BB) {
-                    totalInstructions++;
-                }
+                // Forma optimizada de contar instrucciones
+                totalInstructions += BB.size();
             }
         }
 
@@ -121,46 +127,33 @@ public:
     }
 
 private:
-    // Aplicar plegado de constantes
+    // Wrappers para las clases estáticas
     bool runConstantFolding() {
         bool modified = false;
-        
         for (Function& F : *module) {
             if (F.isDeclaration()) continue;
             modified |= ConstantFolding::runOnFunction(F);
         }
-        
         return modified;
     }
 
-    // Aplicar eliminación de código muerto
     bool runDeadCodeElimination() {
         bool modified = false;
-        
         for (Function& F : *module) {
             if (F.isDeclaration()) continue;
             modified |= DeadCodeElimination::runOnFunction(F);
         }
-        
         return modified;
     }
 
-    // Aplicar optimizaciones de bucles
     bool runLoopOptimizations() {
         bool modified = false;
-        
         for (Function& F : *module) {
             if (F.isDeclaration()) continue;
             modified |= LoopOptimizer::runOnFunction(F);
         }
-        
         return modified;
     }
 };
-
-// Helper function para crear optimizador desde CodeGenerator
-inline std::unique_ptr<Optimizer> createOptimizer(Module* module, int level) {
-    return std::make_unique<Optimizer>(module, level);
-}
 
 #endif // OPTIMIZER_H

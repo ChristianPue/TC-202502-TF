@@ -1,4 +1,3 @@
 # Hashes of file build rules.
 2a8435d1e2a1cbc2b32c19ed35087b41 CMakeFiles/clean-antlr
-735101ddc84dbd7156be3fcd06c13e8f CMakeFiles/test-compile
 90334eb840d2943e5020f2318d665c0e antlr4cpp_generated_src/EduCode/EduCodeLexer.interp

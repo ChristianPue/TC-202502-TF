@@ -6,6 +6,7 @@
 #include "llvm/IR/CFG.h"
 #include <vector>
 #include <set>
+#include <map>
 
 using namespace llvm;
 
@@ -14,43 +15,60 @@ public:
     // Aplica eliminación de código muerto a una función
     static bool runOnFunction(Function& F) {
         bool modified = false;
+        bool changed = true;
         
-        // Paso 1: Eliminar instrucciones sin usos
-        modified |= removeDeadInstructions(F);
-        
-        // Paso 2: Eliminar bloques básicos inalcanzables
-        modified |= removeUnreachableBlocks(F);
-        
-        // Paso 3: Eliminar stores a variables nunca leídas
-        modified |= removeDeadStores(F);
+        // Ejecutar en bucle hasta que no haya más cambios (convergencia)
+        // Ojo: Para compiladores simples, una sola pasada suele bastar, 
+        // pero el bucle asegura limpieza total.
+
+        int passCount = 0;
+        while (changed && passCount < 10) { // Límite de seguridad
+            changed = false;
+
+            // 1. Simplificar ramas constantes (if (true) ...)
+            // Esto suele desconectar bloques, haciéndolos inalcanzables.
+            changed |= simplifyBranches(F);
+
+            // 2. Eliminar bloques inalcanzables
+            changed |= removeUnreachableBlocks(F);
+
+            // 3. Eliminar instrucciones sin uso
+            changed |= removeDeadInstructions(F);
+
+            // 4. Eliminar stores inútiles
+            changed |= removeDeadStores(F);
+
+            if (changed) modified = true;
+            passCount++;
+        }
         
         return modified;
     }
 
 private:
-    // Eliminar instrucciones que no tienen usos
-    static bool removeDeadInstructions(Function& F) {
+    // Detectar bloques con ramas condicionales constantes
+    static bool simplifyBranches(Function& F) {
         bool modified = false;
-        std::vector<Instruction*> toRemove;
+        std::vector<BranchInst*> toSimplify;
 
         for (BasicBlock& BB : F) {
-            for (Instruction& I : BB) {
-                // No eliminar instrucciones con efectos secundarios
-                if (I.mayHaveSideEffects() || I.isTerminator()) {
-                    continue;
-                }
-
-                // Si no tiene usos, marcar para eliminación
-                if (I.use_empty()) {
-                    toRemove.push_back(&I);
-                    modified = true;
+            if (auto* BI = dyn_cast<BranchInst>(BB.getTerminator())) {
+                if (BI->isConditional()) {
+                    if (isa<ConstantInt>(BI->getCondition())) {
+                        toSimplify.push_back(BI);
+                        modified = true;
+                    }
                 }
             }
         }
 
-        // Eliminar instrucciones muertas
-        for (Instruction* I : toRemove) {
-            I->eraseFromParent();
+        for (BranchInst* BI : toSimplify) {
+            ConstantInt* CI = cast<ConstantInt>(BI->getCondition());
+            BasicBlock* target = CI->isOne() ? BI->getSuccessor(0) : BI->getSuccessor(1);
+            
+            // Reemplazar con salto incondicional al target correcto
+            BranchInst::Create(target, BI->getIterator());
+            BI->eraseFromParent();
         }
 
         return modified;
@@ -62,12 +80,10 @@ private:
         std::set<BasicBlock*> reachable;
         std::vector<BasicBlock*> worklist;
 
-        // Comenzar desde el bloque de entrada
         BasicBlock* entry = &F.getEntryBlock();
         reachable.insert(entry);
         worklist.push_back(entry);
 
-        // BFS para encontrar todos los bloques alcanzables
         while (!worklist.empty()) {
             BasicBlock* BB = worklist.back();
             worklist.pop_back();
@@ -79,7 +95,6 @@ private:
             }
         }
 
-        // Eliminar bloques inalcanzables
         std::vector<BasicBlock*> toRemove;
         for (BasicBlock& BB : F) {
             if (reachable.find(&BB) == reachable.end()) {
@@ -89,21 +104,54 @@ private:
         }
 
         for (BasicBlock* BB : toRemove) {
+            // Antes de borrar el bloque, debemos asegurarnos de que nadie lo referencie
+            // (Drop all references). En LLVM simple sin PHI nodes complejos esto suele funcionar,
+            // pero lo correcto es usar DeleteDeadBlock de Utils. 
+            // Como estamos manual:
+            BB->dropAllReferences(); 
             BB->eraseFromParent();
         }
 
         return modified;
     }
 
-    // Eliminar stores a variables que nunca son leídas
+    // Eliminar instrucciones que no tienen usos
+    static bool removeDeadInstructions(Function& F) {
+        bool modified = false;
+        bool changed = true;
+        
+        // Repetir mientras encontremos instrucciones muertas (cadenas de def-use)
+        while (changed) {
+            changed = false;
+            std::vector<Instruction*> toRemove;
+
+            for (BasicBlock& BB : F) {
+                for (Instruction& I : BB) {
+                    if (I.mayHaveSideEffects() || I.isTerminator()) continue;
+
+                    if (I.use_empty()) {
+                        toRemove.push_back(&I);
+                        changed = true;
+                        modified = true;
+                    }
+                }
+            }
+
+            for (Instruction* I : toRemove) {
+                I->eraseFromParent();
+            }
+        }
+
+        return modified;
+    }
+
+    // Eliminar stores a variables que nunca son leídas (Dead Store Elimination básico)
     static bool removeDeadStores(Function& F) {
         bool modified = false;
         std::vector<Instruction*> toRemove;
-
-        // Mapa de allocas y sus loads/stores
         std::map<AllocaInst*, std::vector<Instruction*>> allocaUses;
 
-        // Primera pasada: recolectar información
+        // Recolectar usos
         for (BasicBlock& BB : F) {
             for (Instruction& I : BB) {
                 if (auto* SI = dyn_cast<StoreInst>(&I)) {
@@ -118,12 +166,11 @@ private:
             }
         }
 
-        // Segunda pasada: eliminar stores sin loads posteriores
+        // Analizar allocas
         for (auto& pair : allocaUses) {
-            AllocaInst* AI = pair.first;
+            // AllocaInst* AI = pair.first; // No usado en esta lógica simple
             std::vector<Instruction*>& uses = pair.second;
 
-            // Si solo hay stores y no hay loads, eliminar stores
             bool hasLoad = false;
             for (Instruction* I : uses) {
                 if (isa<LoadInst>(I)) {
@@ -132,6 +179,7 @@ private:
                 }
             }
 
+            // Si la variable NUNCA se lee, todos sus stores son inútiles
             if (!hasLoad) {
                 for (Instruction* I : uses) {
                     if (auto* SI = dyn_cast<StoreInst>(I)) {
@@ -142,41 +190,8 @@ private:
             }
         }
 
-        // Eliminar stores muertos
         for (Instruction* I : toRemove) {
             I->eraseFromParent();
-        }
-
-        return modified;
-    }
-
-    // Detectar bloques con ramas condicionales constantes
-    static bool simplifyBranches(Function& F) {
-        bool modified = false;
-        std::vector<BranchInst*> toSimplify;
-
-        for (BasicBlock& BB : F) {
-            if (auto* BI = dyn_cast<BranchInst>(BB.getTerminator())) {
-                if (BI->isConditional()) {
-                    if (auto* CI = dyn_cast<ConstantInt>(BI->getCondition())) {
-                        toSimplify.push_back(BI);
-                        modified = true;
-                    }
-                }
-            }
-        }
-
-        // Convertir ramas condicionales constantes en saltos directos
-        for (BranchInst* BI : toSimplify) {
-            ConstantInt* CI = cast<ConstantInt>(BI->getCondition());
-            BasicBlock* target = CI->isOne() ? BI->getSuccessor(0) : BI->getSuccessor(1);
-            BasicBlock* deadBranch = CI->isOne() ? BI->getSuccessor(1) : BI->getSuccessor(0);
-            
-            // Reemplazar con salto incondicional
-            BranchInst::Create(target, BI);
-            BI->eraseFromParent();
-            
-            // El bloque muerto se eliminará en removeUnreachableBlocks
         }
 
         return modified;

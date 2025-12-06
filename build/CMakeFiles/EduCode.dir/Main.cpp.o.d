@@ -484,4 +484,69 @@ CMakeFiles/EduCode.dir/Main.cpp.o: \
  /mnt/c/TC-202502/TC-202502-TF/src/codegen/SymbolTable.h \
  /mnt/c/TC-202502/TC-202502-TF/src/codegen/ExpressionGen.h \
  /mnt/c/TC-202502/TC-202502-TF/src/codegen/CodeGenerator.h \
- /mnt/c/TC-202502/TC-202502-TF/src/codegen/StatementGen.h
+ /mnt/c/TC-202502/TC-202502-TF/src/codegen/StatementGen.h \
+ /mnt/c/TC-202502/TC-202502-TF/src/optimizer/Optimizer.h \
+ /usr/include/llvm/IR/LegacyPassManager.h \
+ /usr/include/llvm/Transforms/Scalar.h \
+ /usr/include/llvm/Transforms/Utils/SimplifyCFGOptions.h \
+ /usr/include/llvm/Transforms/Utils.h \
+ /usr/include/llvm/Transforms/InstCombine/InstCombine.h \
+ /usr/include/llvm/IR/PassManager.h /usr/include/llvm/ADT/TinyPtrVector.h \
+ /usr/include/llvm/IR/Analysis.h \
+ /usr/include/llvm/IR/PassManagerInternal.h \
+ /usr/include/llvm/Support/TypeName.h /usr/include/c++/15.2.1/list \
+ /usr/include/c++/15.2.1/bits/stl_list.h \
+ /usr/include/c++/15.2.1/bits/list.tcc /usr/include/llvm/Pass.h \
+ /usr/include/llvm/PassAnalysisSupport.h /usr/include/llvm/PassSupport.h \
+ /usr/include/llvm/PassInfo.h /usr/include/llvm/PassRegistry.h \
+ /usr/include/llvm/Support/RWMutex.h \
+ /usr/include/llvm/Support/Threading.h /usr/include/llvm/ADT/BitVector.h \
+ /usr/include/llvm/Transforms/Utils/InstructionWorklist.h \
+ /usr/include/llvm/ADT/SetVector.h \
+ /usr/include/llvm/Transforms/Scalar/GVN.h \
+ /usr/include/llvm/IR/Dominators.h \
+ /usr/include/llvm/ADT/DepthFirstIterator.h \
+ /usr/include/llvm/Support/CFGDiff.h \
+ /usr/include/llvm/Support/CFGUpdate.h \
+ /usr/include/llvm/Support/GenericDomTree.h \
+ /usr/include/llvm/Support/Allocator.h \
+ /mnt/c/TC-202502/TC-202502-TF/src/optimizer/ConstantFolding.h \
+ /mnt/c/TC-202502/TC-202502-TF/src/optimizer/DeadCodeElimination.h \
+ /mnt/c/TC-202502/TC-202502-TF/src/optimizer/LoopOptimizer.h \
+ /usr/include/llvm/Transforms/Utils/Cloning.h \
+ /usr/include/llvm/Analysis/AssumptionCache.h \
+ /usr/include/llvm/Analysis/InlineCost.h \
+ /usr/include/llvm/Analysis/InlineModelFeatureMaps.h \
+ /usr/include/llvm/Analysis/TensorSpec.h \
+ /usr/include/llvm/Transforms/Utils/ValueMapper.h \
+ /usr/include/llvm/IR/ValueMap.h /usr/include/llvm/Support/Mutex.h \
+ /mnt/c/TC-202502/TC-202502-TF/src/runtime/JITEngine.h \
+ /usr/include/llvm/ExecutionEngine/ExecutionEngine.h \
+ /usr/include/llvm-c/ExecutionEngine.h /usr/include/llvm-c/Target.h \
+ /usr/include/llvm/Config/Targets.def \
+ /usr/include/llvm/Config/AsmPrinters.def \
+ /usr/include/llvm/Config/AsmParsers.def \
+ /usr/include/llvm/Config/Disassemblers.def \
+ /usr/include/llvm-c/TargetMachine.h \
+ /usr/include/llvm/ExecutionEngine/JITSymbol.h \
+ /usr/include/llvm/ADT/FunctionExtras.h /usr/include/llvm/Object/Binary.h \
+ /usr/include/llvm/Object/Error.h \
+ /usr/include/llvm/Support/MemoryBuffer.h \
+ /usr/include/llvm/Support/MemoryBufferRef.h \
+ /usr/include/llvm/Target/TargetMachine.h \
+ /usr/include/llvm/Support/CommandLine.h \
+ /usr/include/llvm/Support/StringSaver.h \
+ /usr/include/llvm/Support/PGOOptions.h \
+ /usr/include/llvm/ADT/IntrusiveRefCntPtr.h \
+ /usr/include/llvm/Target/CGPassBuilderOption.h \
+ /usr/include/llvm/Target/TargetOptions.h \
+ /usr/include/llvm/MC/MCTargetOptions.h \
+ /usr/include/llvm/Support/Compression.h \
+ /usr/include/llvm/ExecutionEngine/GenericValue.h \
+ /usr/include/llvm/ExecutionEngine/MCJIT.h \
+ /usr/include/llvm/Support/TargetSelect.h \
+ /usr/include/llvm/Config/TargetMCAs.def \
+ /usr/include/llvm/Support/DynamicLibrary.h \
+ /usr/include/llvm/IR/Verifier.h \
+ /mnt/c/TC-202502/TC-202502-TF/src/runtime/RuntimeSupport.h \
+ /usr/include/c++/15.2.1/cstdarg

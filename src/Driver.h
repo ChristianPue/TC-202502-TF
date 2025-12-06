@@ -28,6 +28,9 @@ public:
         codeGen->saveIR(filename);
     }
 
+    // Getter para acceder al módulo (necesario para optimizador)
+    llvm::Module* getModule() { return codeGen->getModule(); }
+
     // ==================== PROGRAM ====================
     std::any visitProgram(EduCodeParser::ProgramContext *ctx) override {
         codeGen->createMainFunction();

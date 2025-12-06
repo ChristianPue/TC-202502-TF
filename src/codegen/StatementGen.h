@@ -62,25 +62,32 @@ public:
     void generatePrint(const std::vector<Value*>& values) {
         Function* printfFunc = module->getFunction("printf");
 
+        // 1. Imprimir cada argumento SIN salto de línea
         for (Value* val : values) {
             if (!val) continue;
 
             std::string fmtStr;
             
             if (val->getType()->isIntegerTy(32)) {
-                fmtStr = "%d\n";
+                fmtStr = "%d"; // Quitamos \n
             } else if (val->getType()->isFloatTy()) {
-                fmtStr = "%f\n";
+                // Usamos %.2f para limitar a 2 decimales (arregla el 99.949997)
+                // O podrías usar %g para que sea dinámico y quite ceros extra
+                fmtStr = "%.2f"; 
                 val = builder->CreateFPExt(val, builder->getDoubleTy());
             } else if (val->getType()->isIntegerTy(1)) {
-                fmtStr = "%d\n";
+                fmtStr = "%d"; // Quitamos \n
             } else {
-                fmtStr = "%s\n";
+                fmtStr = "%s"; // Quitamos \n
             }
 
             Value* formatPtr = codeGen->createFormatString(fmtStr);
             builder->CreateCall(printfFunc, {formatPtr, val});
         }
+
+        // 2. Imprimir el salto de línea AL FINAL de todo
+        Value* newlineFmt = codeGen->createFormatString("\n");
+        builder->CreateCall(printfFunc, {newlineFmt});
     }
 
     // Read statement

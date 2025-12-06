@@ -1,0 +1,7 @@
+entero edad = 25;
+decimal precio = 99.95;
+cadena nombre = "Juan";
+
+mostrar("Hola ", nombre);
+mostrar("Tu edad es ", edad);
+mostrar("Tu precio es ", precio);

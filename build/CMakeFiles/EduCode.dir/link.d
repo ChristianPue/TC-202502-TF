@@ -8,7 +8,8 @@ EduCode: \
   CMakeFiles/EduCode.dir/antlr4cpp_generated_src/EduCode/EduCodeBaseVisitor.cpp.o \
   CMakeFiles/EduCode.dir/antlr4cpp_generated_src/EduCode/EduCodeVisitor.cpp.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libantlr4-runtime.so \
-  /usr/lib/libLLVM.so.21.1 \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libLLVM-21.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libdl.a \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libstdc++.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libm.so \
@@ -42,8 +43,8 @@ EduCode: \
   /usr/lib/libzstd.so.1 \
   /usr/lib/libxml2.so.16 \
   /usr/lib/libncursesw.so.6 \
-  /usr/lib/libicuuc.so.76 \
-  /usr/lib/libicudata.so.76
+  /usr/lib/libicuuc.so.78 \
+  /usr/lib/libicudata.so.78
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o:
 
@@ -63,7 +64,9 @@ CMakeFiles/EduCode.dir/antlr4cpp_generated_src/EduCode/EduCodeVisitor.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libantlr4-runtime.so:
 
-/usr/lib/libLLVM.so.21.1:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libLLVM-21.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libdl.a:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libstdc++.so:
 
@@ -131,6 +134,6 @@ CMakeFiles/EduCode.dir/antlr4cpp_generated_src/EduCode/EduCodeVisitor.cpp.o:
 
 /usr/lib/libncursesw.so.6:
 
-/usr/lib/libicuuc.so.76:
+/usr/lib/libicuuc.so.78:
 
-/usr/lib/libicudata.so.76:
+/usr/lib/libicudata.so.78:

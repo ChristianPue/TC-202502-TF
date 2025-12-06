@@ -1,10 +1,4 @@
-/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/intrinsics_gen.dir
-/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/vt_gen.dir
-/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/omp_gen.dir
-/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/acc_gen.dir
-/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/target_parser_gen.dir
 /mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/EduCode.dir
 /mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/clean-antlr.dir
-/mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/test-compile.dir
 /mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/edit_cache.dir
 /mnt/c/TC-202502/TC-202502-TF/build/CMakeFiles/rebuild_cache.dir

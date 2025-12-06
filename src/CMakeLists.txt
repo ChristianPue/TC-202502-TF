@@ -1,13 +1,8 @@
 cmake_minimum_required(VERSION 3.30)
 project(EduCode)
 
-set(CMAKE_BUILD_TYPE Debug)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
 # =====================================
-# Paths base
+# 1. SETUP DE RUTAS BASE
 # =====================================
 set(MY_BASE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../..")
 set(ANTLR_EXECUTABLE "${MY_BASE_DIR}/antlr-4.13.2-complete.jar")
@@ -15,24 +10,22 @@ set(ANTLR_INCLUDE_DIR "/usr/include/antlr4-runtime")
 list(APPEND CMAKE_MODULE_PATH ${MY_BASE_DIR})
 
 # =====================================
-# ANTLR CONFIG
+# 2. CONFIGURACIÓN ANTLR
 # =====================================
 if(NOT EXISTS "${ANTLR_EXECUTABLE}")
-  message(STATUS "Couldn't find: ${ANTLR_EXECUTABLE}")
+  message(STATUS "Downloading ANTLR jar...")
   file(DOWNLOAD
-        "https://www.antlr.org/download/antlr-4.13.2-complete.jar"
-        "${ANTLR_EXECUTABLE}"
-        STATUS DOWNLOAD_STATUS TIMEOUT 60)
+    "https://www.antlr.org/download/antlr-4.13.2-complete.jar"
+    "${ANTLR_EXECUTABLE}"
+    STATUS DOWNLOAD_STATUS TIMEOUT 60)
 endif()
 
 if(NOT EXISTS "${MY_BASE_DIR}/FindANTLR.cmake")
-  message(STATUS "Couldn't find: FindANTLR.cmake")
-  set(URL1 "https://raw.githubusercontent.com/antlr/antlr4/")
-  set(URL2 "refs/heads/dev/runtime/Cpp/cmake/FindANTLR.cmake")
+  message(STATUS "Downloading FindANTLR.cmake...")
   file(DOWNLOAD
-        "${URL1}${URL2}"
-        "${MY_BASE_DIR}/FindANTLR.cmake"
-        STATUS DOWNLOAD_STATUS TIMEOUT 60)
+    "https://raw.githubusercontent.com/antlr/antlr4/master/runtime/Cpp/cmake/FindANTLR.cmake"
+    "${MY_BASE_DIR}/FindANTLR.cmake"
+    STATUS DOWNLOAD_STATUS TIMEOUT 60)
 endif()
 
 find_package(ANTLR REQUIRED)
@@ -42,28 +35,78 @@ file(GLOB G4_FILES "*.g4")
 antlr_target(EduCodeGrammar ${G4_FILES} LEXER PARSER VISITOR)
 
 # =====================================
-# LLVM CONFIG
+# 3. CONFIGURACIÓN LLVM (Manual vía llvm-config)
 # =====================================
-find_package(LLVM REQUIRED CONFIG)
-message(STATUS "Found LLVM ${LLVM_PACKAGE_VERSION}")
-message(STATUS "Using LLVMConfig.cmake in: ${LLVM_DIR}")
+# Usamos directamente los comandos que ejecutaste en tu consola para configurar flags y libs
 
-include_directories(${LLVM_INCLUDE_DIRS})
-add_definitions(${LLVM_DEFINITIONS})
+# Obtener flags de compilación (CXXFLAGS)
+execute_process(
+    COMMAND llvm-config --cxxflags
+    OUTPUT_VARIABLE LLVM_CXXFLAGS
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+# Limpiar flags que pueden confundir a CMake (como -O2 o -g que ya controlamos nosotros)
+# 1. Limpiar flags de optimización/debug que controlamos nosotros
+string(REPLACE "-O2" "" LLVM_CXXFLAGS "${LLVM_CXXFLAGS}")
+string(REPLACE "-g" "" LLVM_CXXFLAGS "${LLVM_CXXFLAGS}")
 
-# Componentes mínimos y correctos para IR
-set(REQ_LLVM LLVM)
+# 2. IMPORTANTE: Habilitar excepciones y RTTI
+# LLVM por defecto trae -fno-exceptions y -fno-rtti. 
+# ANTLR y tu código usan try/catch/dynamic_cast, así que debemos revertirlo.
+string(REPLACE "-fno-exceptions" "-fexceptions" LLVM_CXXFLAGS "${LLVM_CXXFLAGS}")
+string(REPLACE "-fno-rtti" "-frtti" LLVM_CXXFLAGS "${LLVM_CXXFLAGS}")
 
-# =====================================
-# FUENTES DEL PROYECTO (ESTRUCTURA MODULAR)
-# =====================================
+# 3. Limpiar saltos de línea
+string(REPLACE "\n" " " LLVM_CXXFLAGS "${LLVM_CXXFLAGS}")
 
-# Archivos principales
-set(MAIN_SOURCES
-  Main.cpp
+# Obtener directorios de include
+execute_process(
+    COMMAND llvm-config --includedir
+    OUTPUT_VARIABLE LLVM_INCLUDE_DIRS
+    OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 
-# Módulo CodeGen (Objetivo 1: Generación de LLVM IR)
+# Obtener directorio de librerías (LDFLAGS)
+execute_process(
+    COMMAND llvm-config --libdir
+    OUTPUT_VARIABLE LLVM_LIBRARY_DIRS
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
+# Obtener las librerías exactas (LIBS) -> Esto devolverá "-lLLVM-21"
+execute_process(
+    COMMAND llvm-config --libs
+    OUTPUT_VARIABLE LLVM_LIBS
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+string(REPLACE "\n" " " LLVM_LIBS "${LLVM_LIBS}")
+
+# Obtener librerías del sistema (pthreads, dl, zlib, etc.)
+execute_process(
+    COMMAND llvm-config --system-libs
+    OUTPUT_VARIABLE LLVM_SYSTEM_LIBS
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+string(REPLACE "\n" " " LLVM_SYSTEM_LIBS "${LLVM_SYSTEM_LIBS}")
+
+message(STATUS "LLVM Include: ${LLVM_INCLUDE_DIRS}")
+message(STATUS "LLVM Lib Dir: ${LLVM_LIBRARY_DIRS}")
+message(STATUS "LLVM Libs: ${LLVM_LIBS}")
+
+# Configurar el proyecto
+set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Añadir flags de LLVM al compilador
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${LLVM_CXXFLAGS}")
+
+# =====================================
+# 4. DEFINICIÓN DE FUENTES
+# =====================================
+set(MAIN_SOURCES Main.cpp)
+set(DRIVER_HEADERS Driver.h)
+
 set(CODEGEN_HEADERS
   codegen/SymbolTable.h
   codegen/TypeSystem.h
@@ -72,77 +115,57 @@ set(CODEGEN_HEADERS
   codegen/StatementGen.h
 )
 
-# Driver (orquestador)
-set(DRIVER_HEADERS
-  Driver.h
+set(OPTIMIZER_HEADERS
+  optimizer/Optimizer.h
+  optimizer/ConstantFolding.h
+  optimizer/DeadCodeElimination.h
+  optimizer/LoopOptimizer.h
 )
 
-# Combinar todas las fuentes
+set(RUNTIME_HEADERS
+  runtime/JITEngine.h
+  runtime/RuntimeSupport.h
+)
+
 set(ALL_SOURCES
   ${MAIN_SOURCES}
-  ${DRIVER_HEADERS}    # <--- Agrega esto
-  ${CODEGEN_HEADERS}   # <--- Agrega esto
+  ${DRIVER_HEADERS}
+  ${CODEGEN_HEADERS}
+  ${OPTIMIZER_HEADERS}
+  ${RUNTIME_HEADERS}
   ${ANTLR_EduCodeGrammar_CXX_OUTPUTS}
 )
 
 # =====================================
-# EJECUTABLE
+# 5. EJECUTABLE Y ENLACE
 # =====================================
 add_executable(EduCode ${ALL_SOURCES})
 
-# =====================================
-# INCLUDES y LIBRERÍAS
-# =====================================
+# Directorios de cabecera
 target_include_directories(EduCode PRIVATE
-  ${CMAKE_CURRENT_SOURCE_DIR}          # Para acceder a Driver.h
-  ${CMAKE_CURRENT_SOURCE_DIR}/codegen  # Para acceder a codegen/*.h
+  ${CMAKE_CURRENT_SOURCE_DIR}
+  ${CMAKE_CURRENT_SOURCE_DIR}/codegen
+  ${CMAKE_CURRENT_SOURCE_DIR}/optimizer
+  ${CMAKE_CURRENT_SOURCE_DIR}/runtime
   ${ANTLR_INCLUDE_DIR}
   ${ANTLR_EduCodeGrammar_OUTPUT_DIR}
   ${LLVM_INCLUDE_DIRS}
 )
 
+# Directorios de librerías
+link_directories(${LLVM_LIBRARY_DIRS})
+
+# Enlace final
 target_link_libraries(EduCode PRIVATE
   antlr4-runtime
-  ${REQ_LLVM}
+  ${LLVM_LIBS}         # Esto expandirá a -lLLVM-21
+  ${LLVM_SYSTEM_LIBS}
+  ${CMAKE_DL_LIBS}
 )
 
 # =====================================
-# CONFIGURACIÓN ADICIONAL
+# 6. EXTRAS
 # =====================================
-
-# Mostrar estructura del proyecto al configurar
-message(STATUS "==============================================")
-message(STATUS "Estructura del proyecto:")
-message(STATUS "  CMake:    CMakeLists.txt ")
-message(STATUS "  Main:     Main.cpp")
-message(STATUS "  Driver:   Driver.h")
-message(STATUS "  CodeGen:  codegen/")
-message(STATUS "            ├── SymbolTable.h")
-message(STATUS "            ├── TypeSystem.h")
-message(STATUS "            ├── CodeGenerator.h")
-message(STATUS "            ├── ExpressionGen.h")
-message(STATUS "            └── StatementGen.h")
-message(STATUS "==============================================")
-
-# Opciones de compilación para mejor debugging
-if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-  target_compile_options(EduCode PRIVATE -g -O0 -Wall -Wextra)
-  message(STATUS "Modo Debug: habilitado (-g -O0)")
-endif()
-
-# =====================================
-# TARGETS PERSONALIZADOS (OPCIONAL)
-# =====================================
-
-# Target para limpiar archivos generados por ANTLR
 add_custom_target(clean-antlr
   COMMAND ${CMAKE_COMMAND} -E remove_directory ${ANTLR_EduCodeGrammar_OUTPUT_DIR}
-  COMMENT "Limpiando archivos generados por ANTLR..."
-)
-
-# Target para compilar y ejecutar un archivo de prueba
-add_custom_target(test-compile
-  COMMAND ${CMAKE_COMMAND} --build ${CMAKE_BINARY_DIR} --target EduCode
-  DEPENDS EduCode
-  COMMENT "Compilando EduCode..."
 )
