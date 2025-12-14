@@ -1,10 +1,10 @@
-int contador = 0;
+entero contador = 0;
 
-while (contador < 5) {
-  if (contador % 2 == 0) {
-    print("Número par:", contador);
-  } else {
-    print("Número impar:", contador);
+mientras (contador < 5) {
+  si (contador % 2 == 0) {
+    mostrar("Número par:", contador);
+  } sino {
+    mostrar("Número impar:", contador);
   }
   contador = contador + 1;
 }
